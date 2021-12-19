@@ -5,18 +5,21 @@ import { FiChevronsRight } from "react-icons/fi";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 import SingleData from "./SingleData";
 import GridData from "./GridData";
-import Form from "../Sidebar/Form"
+import Form from "../Sidebar/Form";
 
 const Main = ({ active, activeContact }) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       const fetchData = await axios.get(
         "https://jsonplaceholder.typicode.com/posts"
       );
       const limitData = fetchData.data.slice(0, 6);
       setData(limitData);
+      setLoading(false);
       console.log(limitData);
     };
 
@@ -24,17 +27,23 @@ const Main = ({ active, activeContact }) => {
   }, []);
   return (
     <div className="main">
-      {active ? (
-        <div>
-          {data.map((demoData) => (
-            <SingleData demoData={demoData} />
-          ))}
-        </div>
+      {loading ? (
+        <h1 style={{textAlign: "center"}}>Loading...</h1>
       ) : (
-        <div className="grid-container">
-          {data.map((demoData) => (
-            <GridData demoData={demoData} />
-          ))}
+        <div>
+          {active ? (
+            <div>
+              {data.map((demoData) => (
+                <SingleData demoData={demoData} />
+              ))}
+            </div>
+          ) : (
+            <div className="grid-container">
+              {data.map((demoData) => (
+                <GridData demoData={demoData} />
+              ))}
+            </div>
+          )}
         </div>
       )}
       <div className="pages-bar">
