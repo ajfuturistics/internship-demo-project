@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Main from "./components/Main/Main";
+import Form from "./components/Sidebar/Form";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
+  const [active, setActive] = useState(true);
+  const [activeContact, setActiveContact] = useState(false);
+  console.log(active);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar
+        active={active}
+        setActive={setActive}
+        activeContact={activeContact}
+        setActiveContact={setActiveContact}
+      />
+      {activeContact && <Form />}
+      <Main active={active} />
     </div>
   );
 }

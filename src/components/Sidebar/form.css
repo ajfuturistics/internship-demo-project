@@ -1,0 +1,100 @@
+.form-container {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 25rem;
+  background: #dbdbdb;
+  width: 50%;
+  height: 100vh;
+  padding: 1rem 4rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.flex-div {
+  align-items: center;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+.block-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #fff;
+}
+.block-field-name {
+  display: block;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #000;
+  background: #fff;
+  border-width: 1px;
+  border-color: rgba(55, 65, 81, 1);
+  border-radius: 0.375rem;
+}
+.block-field-name:focus {
+  border-color: rgba(59, 130, 246, 1);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.block-input {
+  border: none;
+  display: block;
+  width: 100%;
+}
+.block-name {
+  width: 100%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.subject-div {
+  margin-left: -0.5rem;
+  padding-top: 0.5rem;
+}
+.msg-div {
+  width: 100%;
+  margin-top: 1rem;
+}
+.text-area {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #000;
+  background: #fff;
+  border-width: 1px;
+  border-color: rgba(55, 65, 81, 1);
+  border-radius: 0.375rem;
+}
+.text-area:focus {
+  border-color: rgba(59, 130, 246, 1);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: #000;
+}
+
+.toggle1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-radius: 1rem;
+}
+.form-btn1 {
+  margin: 1rem 0.5rem;
+  padding: 0.91rem 2rem;
+  background: #90ffb5;
+  border-radius: 1rem;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}

@@ -1,0 +1,136 @@
+.main {
+  padding: 2rem 2rem;
+}
+.text-gray {
+  color: #ccc;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.card-container {
+  display: flex;
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 3px 10px #3a3a3a;
+  border-radius: 15px;
+  height: 4.7rem;
+  background: #fff;
+  padding: 6px 10px;
+  width: 94%;
+}
+.icon-cross {
+  width: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  height: 4.7rem;
+  cursor: pointer;
+}
+.card-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+}
+.card-div2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 1.5rem;
+}
+.card-img {
+  padding: 4px;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+.card-div2 h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.card-div2 p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* //2nd Grid Card// */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 1rem;
+  gap: 2rem;
+}
+.grid-card {
+  background: #fff;
+  box-shadow: 2px 3px 10px #3a3a3a;
+  border-radius: 0.5rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0.7rem;
+  flex-direction: column;
+  cursor: pointer;
+}
+.grid-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.grid-div2 {
+  width: 100%;
+}
+.grid-img {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+.grid-div2 h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.grid-div2 p {
+  font-size: 12px;
+  margin: 0;
+}
+.icon-cross-grid {
+  z-index: 1;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+.pages-bar {
+  width: 100%;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0 -2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-card{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 4rem;
+    left: 10rem;
+    width: 80%;
+    height: 85vh;
+    background: #fff;
+    border-radius: 1rem;
+    z-index: 10;
+    box-shadow: 2px 3px 20px #525252;
+}
