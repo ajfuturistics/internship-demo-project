@@ -5,8 +5,9 @@ import { FiChevronsRight } from "react-icons/fi";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 import SingleData from "./SingleData";
 import GridData from "./GridData";
+import Form from "../Sidebar/Form"
 
-const Main = ({ active }) => {
+const Main = ({ active, activeContact }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -42,6 +43,7 @@ const Main = ({ active }) => {
         <RiNumber3 />
         <FiChevronsRight />
       </div>
+      {activeContact && <Form />}
     </div>
   );
 };

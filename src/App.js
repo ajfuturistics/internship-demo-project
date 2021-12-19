@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import Main from "./components/Main/Main";
-import Form from "./components/Sidebar/Form";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
@@ -16,8 +15,7 @@ function App() {
         activeContact={activeContact}
         setActiveContact={setActiveContact}
       />
-      {activeContact && <Form />}
-      <Main active={active} />
+      <Main active={active} activeContact={activeContact} />
     </div>
   );
 }
