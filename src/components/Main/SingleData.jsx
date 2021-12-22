@@ -1,13 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import "./main.css";
 
-const SingleData = ({ demoData }) => {
-    const [disp, setDisp] = useState(false);
+const SingleData = ({ demoData, setData, data }) => {
+  const [disp, setDisp] = useState(false);
+  const handleRemoveData = () => {
+    let tempdataobj = data.filter((dat) => dat.id !== demoData.id);
+    // console.log(tempdataobj);
+    setData(tempdataobj);
+  };
   return (
-    <div onClick={() => setDisp(!disp)}>
+    <div>
       <div className="card-container">
-        <div key={demoData.id} className="card mb-1">
+        <div key={demoData.id} className="card mb-1" onClick={() => setDisp(!disp)}>
           <div className="card-div">
             <img
               className="card-img"
@@ -21,18 +26,19 @@ const SingleData = ({ demoData }) => {
             <p className="">{demoData.body}</p>
             <p className="text-gray">Mon, 21 Dec 2020 14:57 GMT</p>
           </div>
+         
         </div>
         <div className="icon-cross">
-          <AiOutlineCloseCircle size={32} />
+          <AiOutlineCloseCircle size={32} onClick={handleRemoveData} />
         </div>
       </div>
       {disp && (
-        <div className="open-card">
-          <div>id: {demoData.id}</div>
-          <div>title: {demoData.title}</div>
-          <div>body: {demoData.body}</div>
-        </div>
-      )}
+            <div className="open-card">
+              <div>id: {demoData.id}</div>
+              <div>title: {demoData.title}</div>
+              <div>body: {demoData.body}</div>
+            </div>
+          )}
     </div>
   );
 };
